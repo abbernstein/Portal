@@ -1,0 +1,47 @@
+<h2>
+  Services
+</h2>
+<div class="grid-wrapper">
+  <table id="servicesGrid" datatable [dtOptions]="dtOptions" class="row-border hover table">
+    <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>Service</th>
+    </tr>
+    </thead>
+    <tbody *ngIf="services?.length != 0">
+    <tr *ngFor="let service of services">
+      <td><span  class="edit grid-btn">Edit</span></td>
+      <td> <span class="grid-btn" (click)="updateService(service)" >Save</span></td>
+      <td><span class="grid-btn" (click)="deleteService(service)">Delete</span></td>
+      <td><label class="data-label">{{service.serviceDescription}}</label>
+      <select   [(ngModel)]="service.serviceID" class="data-field">
+        <option *ngFor="let serviceObj of dropdownServices" value="{{serviceObj._id}}">{{serviceObj.description}}</option>
+      </select>
+     </td>
+    </tr>
+
+
+    </tbody>
+    <tbody *ngIf="services?.length == 0">
+    <tr>
+      <td colspan="9" class="no-data-available">No data!</td>
+    </tr>
+    <tbody>
+    <tfoot>
+    <tr class="row-to-add">
+
+      <td > <span class="grid-btn" (click)="insertService()"  >Save</span></td>
+      <td colspan="2"><span class="grid-btn">Delete</span></td>
+      <td>
+        <select  id="serviceID">
+          <option *ngFor="let serviceObj of dropdownServices" value="{{serviceObj._id}}">{{serviceObj.description}}</option>
+        </select>
+      </td>
+    </tr>
+    </tfoot>
+  </table>
+  <span class="grid-btn add-row-btn">Add Service</span>
+</div>

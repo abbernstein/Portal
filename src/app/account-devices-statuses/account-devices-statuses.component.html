@@ -1,0 +1,25 @@
+<div class="grid-wrapper">
+  <table datatable [dtOptions]="dtOptions" class="row-border hover table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Device Type</th>
+      <th>Usage</th>
+    </tr>
+    </thead>
+    <tbody *ngIf="devices?.length != 0">
+    <tr *ngFor="let device of devices">
+      <td>{{device._id}}</td>
+      <td>{{device.deviceType}}</td>
+      <td>{{device.usageTime}}</td>
+    </tr>
+    </tbody>
+    <tbody *ngIf="devices?.length == 0">
+    <tr>
+      <td colspan="3" class="no-data-available">No data!</td>
+    </tr>
+    <tbody>
+    <tfoot>
+    </tfoot>
+  </table>
+</div>

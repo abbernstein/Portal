@@ -1,0 +1,31 @@
+
+<div class="grid-wrapper">
+  <table datatable [dtOptions]="dtOptions" class="row-border hover table">
+    <thead>
+    <tr>
+      <th>Gateway ID</th>
+      <th>State</th>
+      <th>Activation Date</th>
+    </tr>
+
+    </thead>
+    <tbody *ngIf="gatewayStatuses?.length != 0">
+    <tr *ngFor="let gateway of gatewayStatuses">
+      <td>
+        {{gateway._id}}
+      </td>
+      <td>
+        {{gateway.state}}
+      </td>
+      <td>
+        {{gateway.activationDate}}
+      </td>
+    </tr>
+    </tbody>
+    <tbody *ngIf="gatewayStatuses?.length == 0">
+    <tr>
+      <td colspan="3" class="no-data-available">No data!</td>
+    </tr>
+    <tbody>
+  </table>
+</div>

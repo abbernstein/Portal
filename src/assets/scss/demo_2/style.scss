@@ -1,0 +1,98 @@
+
+// Booststrap functions and variables
+@import '../../../node_modules/bootstrap/scss/functions';
+@import '../../../node_modules/bootstrap/scss/variables';
+
+// Template variables
+@import '../dark/variables';
+@import './variables';
+
+// SCSS compass funtions
+@import '../../../node_modules/compass-mixins/lib/compass';
+@import '../../../node_modules/compass-mixins/lib/animate';
+
+// Bootstrap main SCSS
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+// Template mixins
+@import '../common/mixins/animation';
+@import '../common/mixins/badges';
+@import '../common/mixins/blockquote';
+@import '../common/mixins/breadcrumbs';
+@import '../common/mixins/buttons';
+@import '../common/mixins/cards';
+@import '../common/mixins/misc';
+@import '../common/mixins/no_ui_slider';
+@import '../common/mixins/pagination';
+@import '../common/mixins/popovers';
+@import '../common/mixins/tooltips';
+@import '../common/mixins/width';
+
+// Core stules
+@import '../common/background';
+@import '../common/reset';
+@import '../common/functions';
+@import '../common/fonts';
+// @import url('https://fonts.googleapis.com/css?family=Overpass:300,400,600,700,800');
+@import '../common/footer';
+@import '../common/misc';
+@import '../common/utilities';
+@import '../common/demo';
+@import '../common/typography';
+
+@import './vertical-wrapper';
+@import './navbar';
+@import './sidebar';
+@import './layouts';
+
+// components
+@import "../../../sass/accordions";
+@import "../../../sass/badges";
+@import "../../../sass/bootstrap-alert";
+@import "../../../sass/breadcrumbs";
+@import "../../../sass/buttons";
+@import "../../../sass/cards";
+@import "../../../sass/checkbox-radio";
+@import "../../../sass/dashboard";
+@import "../../../sass/dropdown";
+@import "../../../sass/forms";
+@import "../../../sass/icons";
+@import "../../../sass/input-group";
+@import "../../../sass/list-group";
+@import "../../../sass/modal";
+@import "../../../sass/pagination";
+@import "../../../sass/popover";
+@import "../../../sass/profile";
+@import "../../../sass/tables";
+@import "../../../sass/timeline";
+@import "../../../sass/chat";
+@import "../../../sass/faq";
+@import "../../../sass/auth";
+
+// Email
+@import '../common/components/email/inbox';
+@import '../common/components/email/email-read';
+@import '../common/components/email/email-compose';
+
+
+// Plugin overrides
+@import "../dark/components/plugin-overrides/ace";
+@import "../dark/components/plugin-overrides/apex-charts";
+@import "../dark/components/plugin-overrides/bootstrap-datepicker";
+@import "../dark/components/plugin-overrides/data-tables";
+@import "../dark/components/plugin-overrides/dropify";
+@import "../dark/components/plugin-overrides/dropzone";
+@import "../dark/components/plugin-overrides/full-calendar";
+@import "../dark/components/plugin-overrides/jquery-flot";
+@import "../dark/components/plugin-overrides/peity";
+@import "../dark/components/plugin-overrides/perfect-scrollbar";
+@import "../dark/components/plugin-overrides/sweet-alert";
+@import "../dark/components/plugin-overrides/select2";
+@import "../dark/components/plugin-overrides/simplemde";
+@import "../dark/components/plugin-overrides/tags-input";
+@import "../dark/components/plugin-overrides/tempusdominus-bootstrap-4";
+@import "../dark/components/plugin-overrides/tinymce";
+@import "../dark/components/plugin-overrides/typeahead";
+@import "../dark/components/plugin-overrides/wizard";
+
+

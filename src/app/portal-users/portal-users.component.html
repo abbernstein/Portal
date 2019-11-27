@@ -1,0 +1,41 @@
+<div class="grid-wrapper">
+
+  <table datatable [dtOptions]="dtOptions" class="row-border hover table">
+    <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Permission</th>
+    </tr>
+    </thead>
+    <tbody *ngIf="persons?.length != 0">
+    <tr *ngFor="let person of persons">
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><span  class="data-label grid-btn">{{ person.firstName }}</span> <input type="text" class="data-field" [(ngModel)]="person.firstName" /></td>
+      <td><label class="data-label">{{ person.email }}</label><input type="text" class="data-field" [(ngModel)]="person.email" /></td>
+      <td></td>
+    </tr>
+    </tbody>
+    <tbody *ngIf="persons?.length == 0">
+    <tr>
+      <td colspan="8" class="no-data-available">No data!</td>
+    </tr>
+    <tbody>
+    <tfoot>
+    <tr class="row-to-add">
+
+      <td colspan="2"> <span class="grid-btn" (click)="insertAccount()"  >Save</span></td>
+      <td><span class="grid-btn">Delete</span></td>
+      <td> <input id="firstName" type="text" class=""  /></td>
+      <td><input id="lastName" type="text"  /></td>
+      <td><input id="email" type="text"  /></td>
+    </tr>
+    </tfoot>
+  </table>
+  <span class="grid-btn add-row-btn">Add Account</span>
+</div>

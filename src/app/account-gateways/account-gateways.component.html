@@ -1,0 +1,35 @@
+<div class="grid-wrapper">
+  <table datatable [dtOptions]="dtOptions" class="row-border hover table">
+    <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>Gateway ID</th>
+    </tr>
+    </thead>
+    <tbody *ngIf="gateways?.length != 0">
+    <tr *ngFor="let gateway of gateways">
+      <td><span  class="edit grid-btn">Edit</span></td>
+      <td> <span class="grid-btn" (click)="updateGateway(gateway)" >Save</span></td>
+      <td><span class="grid-btn" (click)="deleteGateway(gateway)">Delete</span></td>
+      <td><label class="data-label">{{ gateway.gatewayID }}</label> <input type="text" class="data-field" [(ngModel)]="gateway.gatewayID" /></td>
+    </tr>
+    </tbody>
+    <tbody *ngIf="gateways?.length == 0">
+    <tr>
+      <td colspan="9" class="no-data-available">No data!</td>
+    </tr>
+    <tbody>
+    <tfoot>
+    <tr class="row-to-add">
+
+      <td colspan="2"> <span class="grid-btn" (click)="insertGateway()"  >Save</span></td>
+      <td><span class="grid-btn">Delete</span></td>
+      <td> <input id="gatewayID" type="text" class=""  /></td>
+    </tr>
+    </tfoot>
+  </table>
+  <span class="grid-btn add-row-btn">Add Gateway</span>
+</div>
+
